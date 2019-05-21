@@ -1,0 +1,603 @@
+  html {
+font-size: 62.5%
+}
+body {
+background-color: transparent;
+}
+.auto-cover {
+	height: 100vh;
+	width: 100%;
+	background-image: url("auto-cover.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+	position: absolute;
+	z-index: 100;
+	color: rgb(56, 56, 56);
+	font-size: 15rem;
+	padding-left: 10rem;
+	animation-name: auto;
+	animation-delay: 0;
+	animation-duration: 5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  text-shadow: .4rem .4rem .8rem white;
+}
+@keyframes auto {
+  0% {opacity: 1;}
+  30% { opacity: .9;}
+  50% {opacity: .5;}
+  80% {opacity:.3;}
+  100% {opacity:0;
+  		z-index: -100;}
+}
+.container {
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 0;
+  width: 85%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  background-color: transparent;
+  font-family: 'Zeyada', cursive;
+  z-index: -5;
+}
+.logo {
+  background-image: url("corner-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.logo:hover {
+  transform: scale(1.5);
+}
+.menu {
+/*  word-wrap:break-word !important; 
+DONT NEED IT RN, BUT WORD WRAP USED WHEN LIKE U HAVE LONG WORDS AND U WANT THEM TO BE BROKEN INTO THE NEXT LINE*/
+  font-family: 'Zeyada', cursive;
+  position: sticky; /*THIS MAKES THE NAV MENU STICK ON TOP*/
+  top: 0;
+  background-color: transparent;
+  height: auto;
+}
+p {
+  text-align: center;
+}
+.toggle,
+[id^=drop] {
+  display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav { 
+  margin:0;
+  padding: 0;
+  background-color: transparent;
+
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+  content:"";
+  display:table;
+  clear:both;
+}
+nav ul {
+  float: right;
+  padding:0;
+  margin:0;
+  list-style: none;
+  position: relative;
+  }
+  
+/* Positioning the navigation items inline */
+nav ul li {/*THIS IS THE BOXES ON THE RIGHT*/ 
+  margin: 0;
+  display:inline-block;
+  float: left;
+ }
+
+/* Styling the links */
+nav a {
+  display:inline-block;
+  color: black;
+  font-size: 3rem;
+  text-decoration:none;
+  height: 5rem;
+  margin: auto 2rem; 
+ 
+}
+
+
+nav ul li ul li:hover { background: #000000; }
+
+/* Background color change on Hover */
+nav a:hover { 
+  background-image: url(nav-bg.jpg); 
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+  display: none;
+  position: absolute; 
+  top: 6rem; 
+}
+  
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display:inherit;
+  background-color: transparent;
+}
+  
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+  width:17rem;
+  float:none;
+  display:list-item;
+  position: relative;
+}
+
+.button {
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background-image: url("nav-bg1.jpg");
+  background-position: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;  
+  z-index: 999;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1; 
+  z-index: 999;
+}
+
+.popup {
+  margin-left: 25%;
+  padding: 4rem; 
+  margin-top: 2rem;
+  border-radius: .8rem;
+  width: 50%;
+  height: 80vh;
+  position: fixed;
+  transition: all 100ms ease-in-out;
+  background-color: white;
+  z-index: 1000;
+
+}
+.popup-image {
+	width: 70%;
+	margin-left: 15%;
+	height: 30rem; 
+
+}
+
+.popup .close {
+  position: absolute;
+  top: -3rem;
+  right: -2rem;
+  transition: all 200ms;
+  text-decoration: none;
+  color: rgb(178, 255, 192);
+  background: transparent;
+  height: 5rem;
+  width: 5rem;
+  font-size: 10rem;s
+}
+.popup .close:hover {
+  color: rgb(23, 125, 145);
+  background: transparent;
+ }
+
+.popup .content {
+  font-family: 'Patrick Hand SC', cursive; 
+  line-height: 3rem;
+  font-size: 2.5rem;
+  padding-bottom: 2rem;
+}
+
+
+
+
+.header {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  margin-top: 0;
+  height: 90vh;
+  align-content: center;
+  background-image: url("header.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  margin-bottom: 0;
+}
+.title {
+  font-size: 25rem; 
+  text-shadow: .2rem .2rem .8rem white;
+  filter: drop-shadow(0 0 0.75rem white);
+  color: rgb(40, 40, 40);
+  height: 75vh;
+  vertical-align: middle;
+  background-image: url("title-bg.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation-name: title; 
+  animation-duration:3s; 
+}
+.subtitle {
+  bottom:0;
+  position: absolute; 
+  color: rgb(27, 52, 71);
+  font-size: 3.5rem;
+  font-family: 'Vast Shadow', cursive;
+  text-shadow: 0rem 0rem .8rem white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-image: linear-gradient( 
+    to bottom, 
+    transparent, 
+    white);
+  animation-name: showup;
+  animation-duration: 3s;
+  z-index: 10;
+}
+.subtitle-text {
+  margin-bottom: 20vh;
+}
+.header-image {
+  position: absolute;
+  bottom: 0; 
+  left: 0;  
+  width: 80%;
+  margin-left: 10%;
+}
+
+
+
+.second-part {
+  margin-top: 5rem;
+  margin-left: 5%;
+  align-self: center;
+  width: 90%;
+  height: 40rem;
+  border-color: rgb(27, 53, 58);
+  border-width: .05rem;
+  box-shadow: .8rem .8rem 1.9rem grey;
+}
+/*
+THIS IS THE LEAF CIRCLE */
+.circle {
+  background-image: url("quote-floral.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: center;
+  background-position: center;
+  height: 100%;
+  float: left;
+  width: 40rem;
+  font-size: 8rem; 
+  align-content: center;
+  z-index: -1;
+  font-family: 'Amatic SC', cursive;
+}
+.quote-title {
+  margin-top: 14rem;
+}
+.quotes {
+  padding-top: 5rem;
+  padding-right: 2rem; 
+  font-size: 3rem;
+  font-family: 'Amatic SC', cursive; 
+  background-image: url("quotes-bg.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.divider {
+  display: block;
+  width: 85%;
+  height: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.third-part {
+  width: 90%;
+  position: relative;
+  font-size: 2rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  background-color: transparent;
+  margin-left: 5%;
+}
+.letter-card {
+	height: 20rem;
+	width: 20rem;
+}
+.cards {
+  display: inline-flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  justify-content: space-around; 
+}
+.card {
+  perspective: 150rem;
+  -moz-perspective:150rem;
+  position: relative;
+  margin-top: 0;
+  margin: .8rem;
+  width: 25rem;
+  border-radius: 50%;
+}
+.card-side{
+  height: 25rem;
+  width: 25rem;
+  font-size: 1rem;
+  color: white;
+  backface-visibility: hidden;
+  box-shadow: 0 2rem 2rem rgba(0,0,0,.5);
+}
+.card-side-front{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all .4s;
+  border-radius: 50%;
+}
+.card-side-back{
+  background-color: blue;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transform: rotateY(-180deg);
+  transition: all .4s;
+  border-radius: 50%;
+}
+.card:hover .card-side-front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card-side-back {
+  transform: rotateY(0deg);
+}
+.first {
+  background-image: url("firstcard.jpg"); 
+}
+.first-back {
+	background-image: url("firstcard-back.jpg");
+	background-size: contain;
+}
+.second {
+  background-image: url("secondicon.jpg");
+  background-position: center;
+}
+.second-back{
+  background-image: url("secondback.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.third {
+  background-image: url("thirdcard.jpg");
+  background-position: center;
+} 
+.third-back {
+	background-image: url("thirdcard-back.jpg");
+	background-size: contain;
+}
+/*END OF THIRD PART*/
+.fourth-part {
+  width: 80%; 
+  margin-left: 10%;
+  display: inline-flex;
+  border-color: rgb(27, 53, 58);
+  border-width: .05rem;
+  box-shadow: .8rem .8rem 1.9rem grey;
+  margin-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 0;
+}
+.poem-img { 
+  position: relative;
+  float: left;
+  width: 22%;
+  height: 25rem;
+  margin: .2rem .2rem .5rem .5rem;
+  overflow: hidden; 
+  filter: blur(.1rem) grayscale(50%);
+  padding: 1.5rem; 
+}
+  .poem-img:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(71, 103, 114)); 
+  transform: scale3d(2);
+}
+.Poem-Maya {
+  height: 40rem;
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  align-self: center;
+  font-family: 'Allura', cursive;
+  font-size: 3rem;
+  margin-top: 0;
+  overflow: visible;  
+  color: black;
+}
+.text { 
+  white-space:nowrap;
+  display: block;
+  animation-delay: (1s);
+  animation-name: showup; 
+  animation-duration:20s; 
+  animation-timing-function: linear;
+}
+.text2:nth-of-type(n+1) {
+  opacity:0;
+  display: block;
+  white-space:nowrap;
+  animation-delay: (1s);
+  animation-name: slidein;
+  animation-duration: 20s; 
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.one {
+  animation-delay: 2s;
+}
+.two {
+  animation-delay: 3s;
+}
+.three {
+  animation-delay: 4s;
+}
+.four {
+  animation-delay: 5s;
+}
+.five {
+  animation-delay: 6s;
+}
+/*animations*/
+@keyframes showup {
+  0% {opacity:.1; scale:(.2);}
+  20% {opacity:.2; scale:(.5);}
+  30% {opacity:.5; scale: (.8);}
+  80% {opacity:.8; scale: (1.5);}
+  100% {opacity:1; scale: (2);}
+}
+@keyframes slidein {
+  0% { margin-left:-180rem;
+      opacity: 0; opacity: 1}
+  20% { margin-left:-90rem; 
+      opacity: .5;}
+  30% { margin-left:-5rem;  opacity: .8;}
+  80% { margin-left: -2rem; opacity: 1; }
+  100% { margin-left:0;  opacity: 1;}
+}
+@keyframes reveal {
+  0% {opacity:0;width:0;}
+  20% {opacity:1;width:0;}
+  30% {opacity: .3; width:35rem;}
+  80% {opacity:.8; width: 45rem;}
+  100% {opacity:0;width:45rem}
+}
+@keyframes title {
+  0% {opacity: 0;}
+  30% { opacity: .5;}
+  50% {opacity: .5;}
+  80% {opacity:.8;}
+  100% {opacity:1;}
+}
+/*LAST PART*/
+.last-gallery {
+  position: relative;
+  width: 80%;
+  height: 50rem;
+  margin-left: 10%;
+  border-style: solid;
+  border-width: .1rem;
+  border-color: white;
+  box-shadow: .8rem .8rem 1.9rem grey;
+}
+.last-gallery figure {
+  position: absolute;
+  top: 0;
+  margin-left: 6rem; /* width of visible piece */
+  transition: all 10ms;
+  box-shadow: .8rem .8rem 1.9rem grey;
+}
+.last-gallery img {
+  display: inline-block;
+  width: 40rem;
+  height: 30rem;
+  transition: all 0.8s ease-in-out;
+}
+.last-gallery input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5rem; /* just cover visible part */
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 100;
+}
+.last-gallery input:checked ~ figure {
+  left: 35rem;
+  transition: all 0.7s ease-in-out;
+}
+.last-part {
+  background-color: transparent;
+}
+.bottom {
+  height: 15rem;
+  width: 70%;
+  z-index: 100;
+  margin-left: 15%;
+}
+.joy {
+	padding-bottom: 0;
+  width: 80%;
+  position: relative;
+  font-size: 2.5rem;
+  margin-left: 10%;
+  margin-right: auto;
+  margin-top: 43rem;
+  height: 5rem;
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+.sixth-part {
+  position: relative;
+  top: 0;
+  height: 120rem;
+  width: 90%; 
+  margin-left: 5%;
+  border-color: rgb(27, 53, 58);
+  border-width: .05rem;
+  box-shadow: .8rem .8rem 1.9rem grey;
+  margin-bottom: 8rem;
+} 
+.paragraph {
+  font-size: 2rem;
+  padding: 5rem;
+  margin-bottom: 0;
+}
+.paragraph-gallery {
+  width: 90%; 
+  margin-left: 5%;
+}
+.paragraph-image { 
+  height: 25rem;
+  width: 25rem;     
+  float: left;
+  overflow: hidden; 
+  filter: blur(.1rem) grayscale(90%);
+  padding: .6rem; 
+  box-shadow: 0 .4rem .8rem 0 rgba(0, 0, 0, 0.2), 0 .6rem 2rem 0 rgba(0, 0, 0, 0.19);
+}
+.paragraph-image:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(71, 103, 114));
+  transform: scale3d(2);
+}

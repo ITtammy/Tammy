@@ -1,0 +1,65 @@
+
+@media screen and (max-width: 1250px) {
+	html {
+font-size: 50%;
+}
+.title {
+  font-size: 22rem;
+}
+.subtitle-text{
+margin-bottom: 20vh;
+}
+.last-gallery img {
+  width: 30rem;
+  height: 30rem;
+  }
+.joy {
+	font-size: 2.5rem;
+  }
+} 
+@media screen and (max-width: 900px) {
+html {
+font-size: 40%;
+}
+body{
+background-color: blue;
+}
+.Poem-Maya {
+  font-size: 2.5rem;
+}  
+.last-gallery img {
+  width: 28rem;
+  height: 28rem;
+  }
+.last-gallery figure {
+  margin-left: 4rem; /* width of visible piece */
+} 
+.last-gallery {
+  height: 30vh;
+} 
+.sixth-part { 
+  height: 110vh;
+}
+} /*END OF MQ900*/
+@media screen and (max-width: 600px) {
+body {
+	background-color: yellow;
+}
+.quote-title { 
+font-size: 4rem;
+ }
+.last-gallery img {
+  width: 25rem;
+  height: 25rem;
+  }
+.last-gallery figure {
+  margin-left: 2rem; /* width of visible piece */
+} 
+.last-gallery {
+  height: 40vh;
+}
+.paragraph-image { 
+  height: 16vh;   
+} 
+}
+
