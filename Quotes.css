@@ -545,8 +545,8 @@ nav ul ul li {
 }
 .last-gallery img {
   display: inline-block;
-  width: 26%;
-  height: 40rem;
+  width: 38rem;
+  height: 38rem;
   transition: all 0.8s ease-in-out;
   border-radius: 2.5rem;
   box-shadow: .8rem .8rem 1.9rem grey; 
